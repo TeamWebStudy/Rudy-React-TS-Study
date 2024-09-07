@@ -1,9 +1,10 @@
-let a : unknown;
+let a : unknown = 10;
 
 // let b = a + 1; // Error : 'a' is of type 'unknown'.
 
 if (typeof a == 'number') {
     let b = a + 1;
+    console.log("This is number")
 }
 
 // void : is for function that return anything

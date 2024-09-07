@@ -1,7 +1,8 @@
-var a;
+var a = 10;
 // let b = a + 1; // Error : 'a' is of type 'unknown'.
 if (typeof a == 'number') {
     var b = a + 1;
+    console.log("This is number");
 }
 // void : is for function that return anything
 // never : is for function never returns
