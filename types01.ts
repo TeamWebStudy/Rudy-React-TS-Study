@@ -41,11 +41,3 @@ const readonlyArray: readonly number[] = [1,2,3,4]
 // readonlyArray.push(5); // Error : it is a read-only property
 const readonlyTuple: readonly [string, number, boolean] = ["name", 23, false]
 // readonlyTuple[0] = "other name" // Error : it is a read-only property
-
-type Car = {
-    readonly name: Name
-    engine: number
-}
-
-// 6. undefined / null / any
-
