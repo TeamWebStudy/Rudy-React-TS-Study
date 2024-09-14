@@ -12,6 +12,14 @@ type Add = (a: number, b:number) => number;
 
 const add02: Add = (a, b) => a+b;
 
+const func: Add = (a, b) => {
+    if (a > b) {
+        return a + b;
+    } else {
+        return a - b;
+    }
+}
+
 // 2. Overloading
 // 이름만 같고 다른 함수시그니처를 만드는 경우
 // TypeScript
@@ -33,3 +41,25 @@ const push:Push = (config) => {
         console.log(config.path)
     }
 }
+
+type Method = {
+    (num : number): number,
+    (num01: number, num02: number): number
+}
+
+const method1: Method = (param) => {
+    return param;
+}
+
+const method2: Method = (param, param2?: number) => {
+    if (typeof param2 === "number") {
+        return param * param2; // number * number case
+    } else {
+        return param; // single number case
+    }
+    throw new Error("Invalid input");
+}
+
+console.log(method1(10,30)) // 10
+console.log(method2(2,3)) // 6
+console.log(method2(1)) // 1
