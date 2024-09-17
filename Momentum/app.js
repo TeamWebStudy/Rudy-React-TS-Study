@@ -1,7 +1,29 @@
-const h1 = document.querySelector("#hello h1");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-function handleTitleClick() {
-    h1.classList.toggle("clicked");
+const HIDDEN_CLASSNAME = "hidden";
+
+function onLoginSubmit() {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-h1.onclick =  handleTitleClick;
+loginForm.addEventListener("submit", onLoginSubmit);
+
+//1. Event가 발생하면 브라우저에서 onLoginSubmit 라는 이름의 함수를 호출한다.
+//2. onLoginSubmit()이 아닌, onLoginSubmit(object{})의 형태로 호출한다.
+//3. 추가적인 매개변수를 넣어서 호출한다.
+//4. object에는 event에 관한 정보가 존재한다.
+
+const link = document.querySelector("a");
+
+function handleClick(event) {
+    event.preventDefault();
+    console.dir(event)
+}
+
+link.addEventListener("click", handleClick);
