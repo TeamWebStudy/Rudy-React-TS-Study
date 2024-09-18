@@ -2,3 +2,14 @@
 
 ## 웹 스터디 & 개인 공부 페이지
 
+## Javascript
+- JS 언어 공부 페이지
+
+## TypeScript
+- TS 언어 공부 페이지
+
+## Momentum
+- WEB (HTML, CSS, JS) 웹앱 공부 페이지
+
+## React
+- React 공부 페이지
