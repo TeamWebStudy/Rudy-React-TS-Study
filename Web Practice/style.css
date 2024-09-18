@@ -1,0 +1,19 @@
+.body-lightMode {
+    background-color: bisque;
+    color: black;
+}
+
+.body-darkMode {
+    background-color: slategray;
+    color: ivory;
+}
+
+nav {
+    align-items: right;
+    align-content: right;
+    align-self: right;
+}
+
+header {
+    text-align: center;
+}
