@@ -4,8 +4,8 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
 
-function onLoginSubmit() {
-    event.preventDefault();
+function onLoginSubmit(event) {
+    event.preventDefault(); // 이벤트의 기본 동작(새로고침)을 막음
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     greeting.innerText = `Hello ${username}`;
