@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="course01.js" />
+</head>
+<body>
+    <h2 id = "text">원래 텍스트</h2>
+    <button id = "btn">변경하기</button>
+    <button id = "btn">버튼</button>
+    <script>
+        let text = document.querySelector("#text");
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("click", (e) => {
+            console.log(e);
+            text.innerText = "변경된 텍스트!";
+            alert("버튼이 클릭 되었습니다.");
+        });
+    </script>
+</body>
+</html>
